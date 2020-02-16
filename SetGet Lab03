@@ -1,0 +1,114 @@
+class Shape
+{
+	double length;
+	double height;
+	double width;
+	
+	Shape ()
+	{
+		System.out.println("Default Constructor") ;
+	}
+	
+	Shape (double l, double h, double w)
+	{
+		System.out.println("Parameterized Constructor 1") ;
+		System.out.println("Length:" +l) ;
+		System.out.println("Height:" +h) ;
+		System.out.println("Width:" +w) ;		
+	}
+	
+	Shape(double l, double h)
+	{
+		System.out.println("Parameterized Constructor 2") ;
+		System.out.println("Length:" +l) ;
+		System.out.println("Height:" +h) ;
+	}
+	
+	Shape (double l)
+	{
+		System.out.println("Parameterized Constructor 3") ;
+		System.out.println("Length:" +l) ;
+	}
+	
+	void setLength(double l)
+	{
+		length = l ;
+	}
+	double getLength()
+	{
+		return length ;
+	}
+	
+	void setHeight(double h)
+	{
+		height = h ;
+	}
+	double getHeight()
+	{
+		return height ;
+	}
+	
+	void setWidth(double w)
+	{
+		width = w ;
+	}
+	double getWidth()
+	{
+		return width ;
+	}
+	
+	void areaRec ()
+	{
+		double r; 
+		r= getLength()*getWidth() ;
+		
+		System.out.println("Area Of Rectangle:" +r) ;
+	}
+	
+	void areaSquare ()
+	{
+		double s; 
+		s = getLength()*getLength() ;
+		
+		System.out.println("Area Of Square:" +s) ;
+	}
+	
+	void volRec ()
+	{
+		double vr ; 
+		vr=  getLength()*getWidth()*getHeight() ;
+		
+		System.out.println("Volume Of Rectangle:" +vr) ;
+	}
+	
+	void volSquare ()
+	{
+		double vs ;
+		vs	= getLength()*getLength()*getLength() ;
+		
+		System.out.println("Volume Of Square:" +vs) ;
+	}
+	public static void main (String args[])
+	{
+		Shape s1 = new Shape() ;
+		 s1 = new Shape (10,12,14) ;
+		 s1 = new Shape (10,12) ;
+		 s1 = new Shape (10) ;
+		
+		
+		s1.setLength (10) ;
+		s1.setHeight (12) ;
+		s1.setWidth  (14) ;
+		
+		//System.out.println ("Length:" +s1.getLength() ) ;
+		//System.out.println ("Height:" +s1.getHeight() ) ;
+		//System.out.println ("Width:" +s1.getWidth() ) ;
+		
+		s1.areaRec() ;
+		s1.areaSquare() ;
+		s1.volRec() ;
+		s1.volSquare() ;
+	}
+	
+
+}
