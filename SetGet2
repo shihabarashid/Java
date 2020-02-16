@@ -1,0 +1,104 @@
+class ProbationStudent
+{
+	String counselorname ;
+	double cgpa ;
+	
+	ProbationStudent() 
+	{
+		
+	}
+	ProbationStudent (String c, double cg)
+	{
+		System.out.println ("Parameterized Constructor" ) ;
+		System.out.println ("Counselor Name:" +c) ;
+		System.out.println ("CGPA:" +cg) ;
+	}
+	
+	void setCounselorName (String c)
+	{
+		counselorname = c ;
+	}
+	String getCounselorName ()
+	{
+		return counselorname ;
+	}
+	
+	void setCgpa (double cg)
+	{
+		cgpa = cg ;
+	}
+	double getCgpa ()
+	{
+		return cgpa ;
+	}
+	
+	void show ()
+	{
+		System.out.println ("Counselor Name:" +getCounselorName() ) ;
+		System.out.println ("CGPA:" +getCgpa() ) ;
+	}
+	
+}
+
+class RegularStudent
+{
+	String name ;
+	int creditcompleted ;
+	
+	RegularStudent ()
+	{
+		
+	}
+	
+	RegularStudent (String n, int cr) 
+	{
+		System.out.println ("Parameterized Constructor" ) ;
+		System.out.println ("Name:" +n) ;
+		System.out.println ("Credit Completed:" +cr) ;
+	}
+	
+	void setName (String n)
+	{
+		name = n ;
+	}
+	String getName ()
+	{
+		return name ;
+	}
+	
+	void setCreditCompleted (int cr)
+	{
+		creditcompleted = cr ;
+	}
+	int getCreditCompleted ()
+	{
+		return creditcompleted ;
+	}
+	
+	void show ()
+	{
+		System.out.println ("Name:" +getName() ) ;
+		System.out.println ("Credit Completed:" +getCreditCompleted() ) ;
+	}
+}
+
+class Student
+{
+	public static void main(String args[])
+	{
+		ProbationStudent p1 = new ProbationStudent () ;
+		p1 = new ProbationStudent("Mr. Sabbir" , 2.38 ) ;
+		
+		p1.setCounselorName ("Mr. Sabbir") ;
+		p1.setCgpa(2.38) ;
+		p1.show() ;
+		
+		RegularStudent r1 = new RegularStudent () ;
+		r1 = new RegularStudent("Shihab" , 15 ) ;
+		
+		r1.setName ("Shihab") ;
+		r1.setCreditCompleted(15) ;
+		r1.show() ;
+		
+	}
+}
